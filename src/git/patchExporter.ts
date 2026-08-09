@@ -20,10 +20,34 @@ export class GitNotFoundError extends Error {}
 
 const MAX_GIT_BUFFER = 128 * 1024 * 1024;
 
-function runGit(args: readonly string[], cwd: string): Promise<GitResult> {
+/**
+ * Resolve the path to the `git` executable. Prefers the path reported by the
+ * VS Code built-in `vscode.git` extension so that the extension works even
+ * when `git` is not on the system PATH (for example when Git for Windows is
+ * installed but its `bin` directory is not in PATH).
+ */
+async function resolveGitPath(): Promise<string> {
+    try {
+        const gitExtension = vscode.extensions.getExtension<{ getAPI(version: 1): { git: { path: string } } }>('vscode.git');
+        if (gitExtension) {
+            const api = gitExtension.isActive
+                ? gitExtension.exports.getAPI(1)
+                : (await gitExtension.activate()).getAPI(1);
+            const gitPath = api?.git?.path;
+            if (gitPath && gitPath.length > 0) {
+                return gitPath;
+            }
+        }
+    } catch {
+        // Fall through to default.
+    }
+    return 'git';
+}
+
+function runGitWith(gitPath: string, args: readonly string[], cwd: string): Promise<GitResult> {
     return new Promise((resolve, reject) => {
         execFile(
-            'git',
+            gitPath,
             args as string[],
             { cwd, maxBuffer: MAX_GIT_BUFFER, windowsHide: true },
             (error, stdout, stderr) => {
@@ -40,6 +64,10 @@ function runGit(args: readonly string[], cwd: string): Promise<GitResult> {
             }
         );
     });
+}
+
+function runGit(args: readonly string[], cwd: string): Promise<GitResult> {
+    return resolveGitPath().then(gitPath => runGitWith(gitPath, args, cwd));
 }
 
 function assertGitOk(result: GitResult, allowedCodes: readonly number[] = [0]): GitResult {

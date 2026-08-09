@@ -66,6 +66,7 @@ suite('generateRepositoryPatch', () => {
         await git(['config', 'user.email', 'test@example.com'], repoRoot);
         await git(['config', 'user.name', 'Test'], repoRoot);
         await git(['config', 'commit.gpgsign', 'false'], repoRoot);
+        await git(['config', 'core.autocrlf', 'false'], repoRoot);
     });
 
     teardown(async () => {

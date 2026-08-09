@@ -78,7 +78,7 @@
     "package": "npm run check-types && node esbuild.mjs --production",
     "pretest": "tsc -p ./ && npm run lint",
     "lint": "eslint *.mjs && npm run check-types",
-    "test": "vscode-test --config ./.vscode-test.json"
+    "test": "vscode-test --config ./.vscode-test.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
