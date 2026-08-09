@@ -1,10 +1,5 @@
 # Change Log
 
-## [1.0.1] - 2026-08-09
-
-### Fixed
-- Fix Export Patch command not appearing in the Source Control right-click context menu (#3)
-
 ## [1.0.0] - 2026-08-09
 
 ### Added
@@ -15,3 +10,6 @@
 - Add a save dialog with an option to open the exported patch, and the
   `tlcsdm.gitPatchExporter.defaultDirectory` setting for the default save location
 - Add English, Simplified Chinese, and Japanese localization
+
+### Fixed
+- Fix Export Patch command not appearing in the Source Control right-click context menu (#3)

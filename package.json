@@ -2,7 +2,7 @@
   "name": "tlcsdm-git-patch-exporter",
   "displayName": "%displayName%",
   "description": "%description%",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "publisher": "unknowIfGuestInDream",
   "icon": "images/icon.png",
   "repository": {
