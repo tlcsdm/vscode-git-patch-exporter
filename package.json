@@ -14,8 +14,11 @@
   },
   "homepage": "https://github.com/tlcsdm/vscode-git-patch-exporter#readme",
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.74.0"
   },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "categories": [
     "SCM Providers",
     "Other"
@@ -47,14 +50,14 @@
       "scm/resourceState/context": [
         {
           "command": "tlcsdm.gitPatchExporter.exportPatch",
-          "when": "scmProvider == git",
+          "when": "scmProvider == git && (scmResourceGroup == workingTree || scmResourceGroup == index)",
           "group": "1_patchexport@1"
         }
       ],
       "scm/resourceGroup/context": [
         {
           "command": "tlcsdm.gitPatchExporter.exportPatch",
-          "when": "scmProvider == git",
+          "when": "scmProvider == git && (scmResourceGroup == workingTree || scmResourceGroup == index)",
           "group": "1_patchexport@1"
         }
       ]
@@ -84,7 +87,7 @@
     "@eslint/js": "^10.0.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "26.x",
-    "@types/vscode": "^1.125.0",
+    "@types/vscode": "^1.74.0",
     "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.1.0",
     "@vscode/vsce": "^3.9.2",

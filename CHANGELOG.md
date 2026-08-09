@@ -10,3 +10,6 @@
 - Add a save dialog with an option to open the exported patch, and the
   `tlcsdm.gitPatchExporter.defaultDirectory` setting for the default save location
 - Add English, Simplified Chinese, and Japanese localization
+
+### Fixed
+- Fix Export Patch command not appearing in the Source Control Changes file and group right-click menus (#3)
