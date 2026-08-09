@@ -2,7 +2,7 @@
   "name": "tlcsdm-git-patch-exporter",
   "displayName": "%displayName%",
   "description": "%description%",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "unknowIfGuestInDream",
   "icon": "images/icon.png",
   "repository": {
@@ -47,14 +47,12 @@
       "scm/resourceState/context": [
         {
           "command": "tlcsdm.gitPatchExporter.exportPatch",
-          "when": "scmProvider == git",
           "group": "1_patchexport@1"
         }
       ],
       "scm/resourceGroup/context": [
         {
           "command": "tlcsdm.gitPatchExporter.exportPatch",
-          "when": "scmProvider == git",
           "group": "1_patchexport@1"
         }
       ]

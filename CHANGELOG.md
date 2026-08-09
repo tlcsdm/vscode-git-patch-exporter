@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.1] - 2026-08-09
+
+### Fixed
+- Fix Export Patch command not appearing in the Source Control right-click context menu (#3)
+
 ## [1.0.0] - 2026-08-09
 
 ### Added
