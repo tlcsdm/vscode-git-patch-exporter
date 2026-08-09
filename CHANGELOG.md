@@ -12,4 +12,4 @@
 - Add English, Simplified Chinese, and Japanese localization
 
 ### Fixed
-- Fix Export Patch command not appearing in the Source Control right-click context menu (#3)
+- Fix Export Patch command not appearing in the Source Control Changes file and group right-click menus (#3)

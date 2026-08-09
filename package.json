@@ -50,12 +50,14 @@
       "scm/resourceState/context": [
         {
           "command": "tlcsdm.gitPatchExporter.exportPatch",
+          "when": "scmProvider == git && (scmResourceGroup == workingTree || scmResourceGroup == index)",
           "group": "1_patchexport@1"
         }
       ],
       "scm/resourceGroup/context": [
         {
           "command": "tlcsdm.gitPatchExporter.exportPatch",
+          "when": "scmProvider == git && (scmResourceGroup == workingTree || scmResourceGroup == index)",
           "group": "1_patchexport@1"
         }
       ]
