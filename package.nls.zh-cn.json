@@ -1,0 +1,8 @@
+{
+    "displayName": "Tlcsdm Git 补丁导出",
+    "description": "在源代码管理视图中将选中的改动文件导出为可通过 git apply 应用的 Git .patch 补丁文件。",
+    "command.exportPatch.title": "导出补丁",
+    "command.exportPatch.category": "Git 补丁",
+    "config.title": "Git 补丁导出",
+    "config.defaultDirectory.description": "保存导出补丁文件时使用的默认目录。如果为空，则使用仓库根目录。"
+}

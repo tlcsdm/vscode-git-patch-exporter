@@ -1,0 +1,11 @@
+{
+    "No changed files were selected to export.": "No changed files were selected to export.",
+    "The selected files are not part of a Git repository.": "The selected files are not part of a Git repository.",
+    "Git was not found. Please install Git and ensure it is available on your PATH.": "Git was not found. Please install Git and ensure it is available on your PATH.",
+    "No changes were found for the selected files.": "No changes were found for the selected files.",
+    "Exporting patch...": "Exporting patch...",
+    "Save Patch": "Save Patch",
+    "Patch exported to {0}": "Patch exported to {0}",
+    "Open Patch": "Open Patch",
+    "Failed to export patch: {0}": "Failed to export patch: {0}"
+}

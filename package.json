@@ -1,0 +1,102 @@
+{
+  "name": "tlcsdm-git-patch-exporter",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "unknowIfGuestInDream",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlcsdm/vscode-git-patch-exporter"
+  },
+  "bugs": {
+    "url": "https://github.com/tlcsdm/vscode-git-patch-exporter/issues"
+  },
+  "homepage": "https://github.com/tlcsdm/vscode-git-patch-exporter#readme",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "SCM Providers",
+    "Other"
+  ],
+  "keywords": [
+    "git",
+    "patch",
+    "diff",
+    "export",
+    "scm"
+  ],
+  "l10n": "./l10n",
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tlcsdm.gitPatchExporter.exportPatch",
+        "title": "%command.exportPatch.title%",
+        "category": "%command.exportPatch.category%"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "tlcsdm.gitPatchExporter.exportPatch",
+          "when": "false"
+        }
+      ],
+      "scm/resourceState/context": [
+        {
+          "command": "tlcsdm.gitPatchExporter.exportPatch",
+          "when": "scmProvider == git",
+          "group": "1_patchexport@1"
+        }
+      ],
+      "scm/resourceGroup/context": [
+        {
+          "command": "tlcsdm.gitPatchExporter.exportPatch",
+          "when": "scmProvider == git",
+          "group": "1_patchexport@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%config.title%",
+      "properties": {
+        "tlcsdm.gitPatchExporter.defaultDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "%config.defaultDirectory.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && node esbuild.mjs",
+    "check-types": "tsc --noEmit",
+    "watch": "node esbuild.mjs --watch",
+    "package": "npm run check-types && node esbuild.mjs --production",
+    "pretest": "tsc -p ./ && npm run lint",
+    "lint": "eslint *.mjs && npm run check-types",
+    "test": "vscode-test --config ./.vscode-test.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "26.x",
+    "@types/vscode": "^1.125.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^3.9.2",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.8.0",
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.66.0"
+  },
+  "license": "MIT",
+  "overrides": {
+    "glob": "^13.0.0",
+    "serialize-javascript": "^7.0.4",
+    "diff": "^8.0.3"
+  }
+}
