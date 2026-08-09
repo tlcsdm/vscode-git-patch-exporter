@@ -3,6 +3,6 @@
     "description": "Export selected changed files from the Source Control view as a Git .patch file that can be applied with git apply.",
     "command.exportPatch.title": "Export Patch",
     "command.exportPatch.category": "Git Patch",
-    "config.title": "Git Patch Exporter",
+    "config.title": "Tlcsdm Git Patch Exporter",
     "config.defaultDirectory.description": "Default directory used when saving exported patch files. If empty, the repository root is used."
 }
