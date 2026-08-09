@@ -1,0 +1,11 @@
+{
+    "No changed files were selected to export.": "エクスポートする変更ファイルが選択されていません。",
+    "The selected files are not part of a Git repository.": "選択したファイルは Git リポジトリに含まれていません。",
+    "Git was not found. Please install Git and ensure it is available on your PATH.": "Git が見つかりませんでした。Git をインストールし、PATH で利用できることを確認してください。",
+    "No changes were found for the selected files.": "選択したファイルにエクスポートできる変更がありません。",
+    "Exporting patch...": "パッチをエクスポートしています...",
+    "Save Patch": "パッチを保存",
+    "Patch exported to {0}": "パッチを {0} にエクスポートしました",
+    "Open Patch": "パッチを開く",
+    "Failed to export patch: {0}": "パッチのエクスポートに失敗しました: {0}"
+}

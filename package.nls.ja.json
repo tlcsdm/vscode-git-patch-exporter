@@ -1,0 +1,8 @@
+{
+    "displayName": "Tlcsdm Git パッチエクスポート",
+    "description": "ソース管理ビューで選択した変更ファイルを、git apply で適用できる Git .patch ファイルとしてエクスポートします。",
+    "command.exportPatch.title": "パッチをエクスポート",
+    "command.exportPatch.category": "Git パッチ",
+    "config.title": "Git パッチエクスポート",
+    "config.defaultDirectory.description": "エクスポートしたパッチファイルを保存する際に使用する既定のディレクトリ。空の場合はリポジトリのルートが使用されます。"
+}

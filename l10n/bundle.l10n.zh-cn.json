@@ -1,0 +1,11 @@
+{
+    "No changed files were selected to export.": "没有选择要导出的改动文件。",
+    "The selected files are not part of a Git repository.": "所选文件不属于任何 Git 仓库。",
+    "Git was not found. Please install Git and ensure it is available on your PATH.": "未找到 Git。请安装 Git 并确保其位于 PATH 环境变量中。",
+    "No changes were found for the selected files.": "所选文件没有可导出的改动。",
+    "Exporting patch...": "正在导出补丁……",
+    "Save Patch": "保存补丁",
+    "Patch exported to {0}": "补丁已导出到 {0}",
+    "Open Patch": "打开补丁",
+    "Failed to export patch: {0}": "导出补丁失败：{0}"
+}
