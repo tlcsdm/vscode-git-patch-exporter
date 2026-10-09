@@ -94,7 +94,7 @@
     "esbuild": "^0.28.1",
     "eslint": "^10.12.0",
     "typescript": "^7.0.2",
-    "typescript-eslint": "^8.71.0"
+    "typescript-eslint": "^8.71.1"
   },
   "license": "MIT",
   "overrides": {
