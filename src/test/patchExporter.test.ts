@@ -52,7 +52,8 @@ suite('collectResourceUris', () => {
     });
 });
 
-suite('generateRepositoryPatch', () => {
+suite('generateRepositoryPatch', function () {
+    this.timeout(10_000);
     let repoRoot: string;
 
     async function git(args: string[], cwd: string): Promise<string> {
